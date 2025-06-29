@@ -1,0 +1,122 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #004080;
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.4em 0.6em;
+  border-radius: 5px;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #007acc;
+  color: white;
+}
+
+/* HERO SECTION */
+.hero {
+  flex: 1;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* LAYOUT - TEXT LEFT, IMAGE RIGHT */
+.side-by-side {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.text {
+  flex: 2 1 600px;
+}
+
+.text h1 {
+  font-size: 2.4rem;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+/* IMAGE + CAPTION */
+.photo-column {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-column img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* FOOTER */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  margin-top: auto;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .side-by-side {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .text h1 {
+    font-size: 2rem;
+  }
+
+  .photo-column img {
+    max-width: 100%;
+  }
+}

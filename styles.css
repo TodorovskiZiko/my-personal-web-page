@@ -1,0 +1,108 @@
+/* Reset some default styles */
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main.hero {
+  flex: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVIGATION */
+nav {
+  background-color: #004080;
+  padding: 1em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* HERO SECTION */
+.hero {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.intro {
+  display: flex;
+  max-width: 1000px;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  max-width: 500px;
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 1.2rem;
+}
+
+.photo img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #004080;
+  color: white;
+  margin-top: 40px;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.edu-photo {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
