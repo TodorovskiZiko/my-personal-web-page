@@ -1,4 +1,5 @@
-/* --- RESET & BASE STYLES --- */
+
+/* RESET & BASE */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +7,15 @@
 }
 
 html, body {
-  height: 100%;
   font-family: 'Segoe UI', sans-serif;
   background-color: #f4f6f8;
   color: #333;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- NAVIGATION --- */
+/* NAVIGATION */
 nav {
   background-color: #004080;
   padding: 1em;
@@ -24,8 +27,6 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 2em;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
@@ -39,60 +40,66 @@ nav a.active {
   color: #ffd700;
 }
 
-/* --- MAIN HOBBIES SECTION --- */
+/* MAIN LAYOUT */
 main.hero {
   flex: 1;
-  padding: 40px 20px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  padding: 40px 20px;
 }
 
 .hobbies-layout {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
   max-width: 1200px;
   width: 100%;
-  justify-content: center;
 }
 
-/* --- PHOTO COLUMN --- */
-.photo-column-3 {
+/* IMAGE COLUMNS */
+.photo-column {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  flex: 1 1 250px;
+  gap: 15px;
+  align-items: center;
+  flex: 1;
 }
 
-.photo-column-3 img {
+.photo-column img {
   width: 100%;
-  max-width: 250px;
+  max-width: 280px;   /* smaller images */
   height: auto;
-  max-height: 250px;
-  object-fit: cover;
+  max-height: 280px;  /* smaller images */
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* --- HOBBY CARDS --- */
+/* HOBBY CARDS */
 .hobby-cards {
-  flex: 2 1 600px;
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
 }
 
 .hobby-cards h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #004080;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .hobby-card {
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   padding: 20px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   border-left: 5px solid #007acc;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
 .hobby-card h2 {
@@ -100,11 +107,26 @@ main.hero {
   margin-bottom: 10px;
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
   background-color: #004080;
   color: white;
   text-align: center;
   padding: 1em;
-  margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .hobbies-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .photo-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .photo-column img {
+    max-width: 40%;
+  }
 }
